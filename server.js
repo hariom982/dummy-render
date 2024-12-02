@@ -9,9 +9,15 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB Connection
+const mongoose = require("mongoose");
+
 mongoose.connect("mongodb+srv://hariom:salmankhan@cluster0.4khuw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+}).then(() => {
+  console.log("Connected to MongoDB");
+}).catch((err) => {
+  console.error("MongoDB connection error:", err);
 });
 
 const userSchema = new mongoose.Schema({
