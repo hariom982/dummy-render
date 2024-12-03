@@ -12,7 +12,7 @@ mongoose.connect("mongodb+srv://hariom:salmankhan@cluster0.4khuw.mongodb.net/?re
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => {
-  console.log("Connected to MongoDB");
+  console.log("Connected to ");
 }).catch((err) => {
   console.error("MongoDB connection error:", err);
 });
