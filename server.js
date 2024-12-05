@@ -24,7 +24,7 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model("User", userSchema);
 
 // Endpoint to verify email
-app.get("/verify-email", async (req, res) => {
+app.post("/verify-email", async (req, res) => {
   const { email } = req.body;
   if (!email) return res.status(400).json({ error: "Email is required" });
 
